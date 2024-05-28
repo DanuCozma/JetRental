@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="{{ url_for('static', filename='styles/rented_jets.css') }}" rel="stylesheet" type="text/css">
+    {% include 'head.html' %}
+</head>
+<body>
+{% include 'header.html' %}
+
+<h2>Your Rented Jets</h2>
+<div class="jet-container">
+    <div class="jet-list">
+        {% for rented_jet in rented_jets %}
+        <div class="jet">
+            <img alt="{{ rented_jet.jet.name }}" class="jet-image" src="{{ rented_jet.jet.image_url }}">
+            <div class="jet-details">
+                <h3>{{ rented_jet.jet.name }}</h3>
+                <p><strong>Model:</strong> {{ rented_jet.jet.model }}</p>
+                <p><strong>Year:</strong> {{ rented_jet.jet.year }}</p>
+                <p><strong>Start Date:</strong> {{ rented_jet.start_date.strftime('%m/%d/%Y') }}</p>
+                <p><strong>End Date:</strong> {{ rented_jet.end_date.strftime('%m/%d/%Y') }}</p>
+                <p><strong>Rental Days:</strong> {{ rented_jet.rental_days }}</p>
+                <p><strong>Decorations:</strong> {{ rented_jet.decorations }}</p>
+                {% if is_admin %}
+                <p><strong>User_ID:</strong> {{ rented_jet.user_id }}</p>
+                <p><strong>User Fullname:</strong> {{ rented_jet.user.full_name }}</p>
+                {% endif %}
+
+                <p class="total-price"><strong>Total Price:</strong> ${{ rented_jet.total_price }}</p>
+                <form action="/delete-rental/{{ rented_jet.id }}" method="post">
+                    <button class="delete-btn" type="submit">Delete</button>
+                </form>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% include 'footer.html' %}
+
+</body>
+</html>

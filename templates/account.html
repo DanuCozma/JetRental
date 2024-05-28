@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include 'head.html' %}
+    <link href="{{ url_for('static', filename='styles/account.css') }}" rel="stylesheet">
+</head>
+<body>
+
+{% include 'header.html' %}
+
+<div class="container-body">
+    <h1>Welcome to Your Account</h1>
+    <p>Hello, {{ username }}!</p>
+    <p>This is your account page. You can customize it as per your requirements.</p>
+    <a class="logout-btn" href="/logout">Logout</a>
+    <a href="/"> Home </a>
+
+    {% if is_admin %}
+    <div class="admin-table">
+        <input checked id="users" name="table" type="radio">
+        <input id="jets" name="table" type="radio">
+        <input id="rentals" name="table" type="radio">
+
+
+        <div class="table-controls">
+            <label class="table-switch-btn" for="users">Users</label>
+            <label class="table-switch-btn" for="jets">Jets</label>
+            <label class="table-switch-btn" for="rentals">Rentals</label>
+        </div>
+
+        <table id="users-table">
+            <thead>
+            <tr>
+                <th>User ID</th>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Full Name</th>
+                <th>Admin Role</th>
+                <th>Action</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for user in all_users %}
+            <tr>
+                <td>{{ user.id_user }}</td>
+                <td>{{ user.username }}</td>
+                <td>{{ user.email }}</td>
+                <td>{{ user.full_name }}</td>
+                <td>{{ user.is_admin }}</td>
+                <td>
+                    <form action="/delete-user/{{ user.id_user }}" method="post"
+                          onsubmit="return confirm('Are you sure you want to delete this user?');">
+                        <input name="_method" type="hidden" value="DELETE">
+                        <button class="delete-btn" type="submit">Delete</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+
+
+        <table id="rentals-table">
+            <thead>
+            <tr>
+                <th>Jet ID</th>
+                <th>Jet Model</th>
+                <th>Jet Name</th>
+                <th>Decorations</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th>Price Per Day</th>
+                <th>Total Price</th>
+                <th>Rental Days</th>
+                <th>Action</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for rented_jet in rented_jets %}
+            <tr>
+                <td>{{ rented_jet.jet_id }}</td>
+                <td>{{ rented_jet.jet_model }}</td>
+                <td>{{ rented_jet.jet_name }}</td>
+                <td>{{ rented_jet.decorations }}</td>
+                <td>{{ rented_jet.start_date }}</td>
+                <td>{{ rented_jet.end_date }}</td>
+                <td>{{ rented_jet.price_per_day }}</td>
+                <td>{{ rented_jet.total_price }}</td>
+                <td>{{ rented_jet.rental_days }}</td>
+                <td>
+                    <form action="/delete-rental/{{ rented_jet.id }}" method="post">
+                        <button class="delete-btn" type="submit">Delete</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+
+
+        <table id="jets-table">
+            <thead>
+            <tr>
+                <th>Jet ID</th>
+                <th>Name</th>
+                <th>Model</th>
+                <th>Year</th>
+                <th>Color</th>
+                <th>Price</th>
+                <th>State</th>
+                <th>Action</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for jet in jets %}
+            <tr>
+                <td>{{ jet.id }}</td>
+                <td>{{ jet.name }}</td>
+                <td>{{ jet.model }}</td>
+                <td>{{ jet.year }}</td>
+                <td>{{ jet.color }}</td>
+                <td>{{ jet.price }}</td>
+                <td>{{ jet.state }}</td>
+                <td>
+                    <form action="/delete-jet/{{ jet.id }}" method="POST">
+                        <button class="delete-btn" type="submit">Delete</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+
+    </div>
+    {% endif %}
+
+
+</div>
+
+<h2>Notifications</h2>
+<ul class="notification-list">
+    {% for notification in notifications %}
+    <li>{{ notification }}</li>
+    {% endfor %}
+</ul>
+
+
+{% include 'footer.html' %}
+
+</body>
+</html>

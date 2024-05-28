@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include 'head.html' %}
+    <link href="{{ url_for('static', filename='styles/home.css') }}" rel="stylesheet" type="text/css">
+</head>
+<body>
+<!-- Header Section -->
+{% include 'header.html' %}
+
+<!-- Explore Section -->
+<section class="explore bg-dark text-light py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-12">
+                <h1 class="display-4">Bine ați venit la JetElite</h1>
+                <p class="lead">Descoperiți o nouă dimensiune a călătoriilor aeriene cu serviciile noastre exclusive de închiriere de jeturi private.</p>
+                <a class="btn btn-primary btn-lg" href="/jets">Explore Jets</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="about py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h2 class="mb-4">About Us</h2>
+                <p class="text-muted">La JetElite, ne dedicăm să vă oferim o experiență de zbor de neegalat, combinând eleganța, confortul și eficiența într-un singur pachet premium. Fie că aveți nevoie de o deplasare rapidă pentru afaceri sau doriți să călătoriți în stil și confort, flota noastră de jeturi private este la dispoziția dumneavoastră pentru a vă satisface toate cerințele..</p>
+            </div>
+            <div class="col-md-6">
+                <img src="{{ url_for('static', filename='images/MAX1.jpg') }}" class="img-fluid rounded" alt="About Us Image">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section class="services bg-light py-5">
+    <div class="container">
+        <h2 class="mb-4">Services</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Daily Rentals</h5>
+                        <p class="card-text">Închiriați un jet pentru o zi și explorați lumea în propriul ritm..</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Long-Term Leases</h5>
+                        <p class="card-text">Dacă sunteți în căutarea unei soluții pe termen lung, oferim opțiuni de leasing adaptate nevoilor dumneavoastră..</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Special Offers</h5>
+                        <p class="card-text">Rămâneți la curent cu ofertele speciale și reducerile noastre la închirierea de jeturi..</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="testimonials py-5">
+    <div class="container">
+        <h2 class="mb-4">Testimonials</h2>
+        <!-- Add testimonials carousel or grid here -->
+    </div>
+</section>
+
+<!-- Fleet Section -->
+<section class="fleet py-5">
+    <div class="container">
+        <h2 class="mb-4">Our Fleet</h2>
+        <!-- Add jet listings or grid here -->
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact py-5">
+    <div class="container">
+        <h2 class="mb-4">Contact Us</h2>
+        <!-- Add contact form or contact information here -->
+    </div>
+</section>
+
+<!-- Footer Section -->
+{% include 'footer.html' %}
+
+</body>
+</html>

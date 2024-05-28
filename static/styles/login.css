@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+body, input, button, select, textarea {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000000; /* Negru */
+}
+
+.wrapper {
+    position: relative;
+    max-width: 430px;
+    width: 100%;
+    background: #1c1c1c; /* Gri închis */
+    padding: 34px;
+    border-radius: 6px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.wrapper h2 {
+    position: relative;
+    font-size: 22px;
+    font-weight: 600;
+    color: #FFD700; /* Auriu */
+}
+
+.wrapper form {
+    margin-top: 30px;
+}
+
+.wrapper form .input-box {
+    margin: 18px 0;
+}
+
+form .input-box input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    padding: 0 15px;
+    font-size: 17px;
+    font-weight: 400;
+    color: #ffffff; /* Alb */
+    border: 1.5px solid #FFD700; /* Auriu */
+    border-bottom-width: 2.5px;
+    border-radius: 6px;
+    background: #333333; /* Gri închis */
+    transition: all 0.3s ease;
+}
+
+.input-box input:focus,
+.input-box input:valid {
+    border-color: #FFD700; /* Auriu */
+}
+
+form .policy {
+    display: flex;
+    align-items: center;
+}
+
+label {
+    margin: 0 !important;
+    color: #FFD700; /* Auriu */
+}
+
+form h3 {
+    color: #FFD700; /* Auriu */
+    font-size: 14px;
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+.input-box.button input {
+    color: #000000; /* Negru */
+    letter-spacing: 1px;
+    border: none;
+    background: #FFD700; /* Auriu */
+    cursor: pointer;
+}
+
+.input-box.button input:hover {
+    background: #FFC700; /* Aurie mai deschisă */
+}
+
+form .text h3 {
+    color: #FFD700; /* Auriu */
+    width: 100%;
+    text-align: center;
+}
+
+form .text h3 a {
+    color: #FFD700; /* Auriu */
+    text-decoration: none;
+}
+
+form .text h3 a:hover {
+    text-decoration: underline;
+}
+
+.back-button {
+    background-color: #FFD700; /* Auriu */
+    color: #000000; /* Negru */
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.back-button:hover {
+    background-color: #FFC700; /* Aurie mai deschisă */
+}

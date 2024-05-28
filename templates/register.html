@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+    {% include 'head.html' %}
+    <link href="{{ url_for('static', filename='styles/register.css') }}" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<div class="wrapper">
+    <h2>Registration</h2>
+    <form action="/register" method="POST">
+        <div class="input-box">
+            <label for="username">Username:</label>
+            <input class="form-control" id="username" name="username" required type="text">
+        </div>
+        <div class="input-box">
+            <label for="email">Email:</label>
+            <input class="form-control" id="email" name="email" required type="email">
+        </div>
+        <div class="input-box">
+            <label for="password">Password:</label>
+            <input class="form-control" id="password" name="password" required type="password">
+        </div>
+        <div class="input-box">
+            <label for="full_name">Full Name:</label>
+            <input class="form-control" id="full_name" name="full_name" type="text">
+        </div>
+        <div class="policy">
+            <input id="accept_terms" name="accept_terms" required type="checkbox">
+            <label for="accept_terms">I accept all terms & conditions</label>
+        </div>
+        <div class="input-box button">
+            <a class="back-button" href="/">Back to Main Page</a>
+        </div>
+        <div class="input-box button">
+            <input type="submit" value="Register Now">
+        </div>
+        <div class="text">
+            <h3>Already have an account? <a href="/login">Login now</a></h3>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>

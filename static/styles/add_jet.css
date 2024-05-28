@@ -1,0 +1,129 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+    font-family: Times New Roman, Times New Roman;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styles */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.signin-signup {
+    margin-left: auto;
+}
+
+/* Form Styles */
+#new-jet-form {
+    padding: 50px 0;
+    max-width: 600px; /* Adjust the width of the form */
+    margin: 0 auto; /* Center the form horizontally */
+}
+
+#new-jet-form h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+#new-jet-form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#new-jet-form input[type="text"],
+#new-jet-form input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#new-jet-form input[type="file"] {
+    display: block;
+    margin-top: 20px; /* Add space between file input and submit button */
+}
+
+#new-jet-form input[type="submit"] {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px; /* Add space between file input and submit button */
+    background-color: #f39c12;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#new-jet-form input[type="submit"]:hover {
+    background-color: #e67e22;
+}
+
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer ul {
+    list-style-type: none;
+}
+
+footer ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+footer ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer p {
+    margin-top: 20px;
+    font-size: 14px;
+}

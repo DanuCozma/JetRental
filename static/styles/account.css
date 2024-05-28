@@ -1,0 +1,223 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+    font-family: Times New Roman, Times New Roman;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Header Styles */
+header {
+    background-color: #000000;
+    color: #74c02d;
+    padding: 20px 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.signin-signup {
+    margin-left: auto;
+}
+/* Body */
+.container-body {
+    padding: 20px;
+    text-align: center;
+}
+
+.container-body h1 {
+    margin-bottom: 10px;
+}
+
+.container-body p {
+    margin-bottom: 15px;
+}
+
+.logout-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: #555;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+
+.container-body a {
+    color: #333;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.container-body a:hover {
+    text-decoration: underline;
+}
+
+
+/* Footer Section Styles */
+footer {
+    background-color: #000000;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+}
+
+footer ul {
+    list-style-type: none;
+}
+
+footer ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+footer ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer p {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+/* Table Styles */
+.admin-table {
+    margin-top: 20px;
+}
+
+.table-controls {
+    margin-bottom: 10px;
+}
+
+.table-switch-btn {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.table-switch-btn:hover {
+    background-color: #555;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+table th, table td {
+    padding: 8px;
+    border: 1px solid #ddd;
+}
+
+table th {
+    background-color: #000000;
+    color: #fff;
+}
+
+.delete-btn {
+    background-color: #ff6666;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background-color: #ff3333;
+}
+
+/* Table Switching Styles */
+.admin-table input[type="radio"] {
+    display: none;
+}
+
+.table-controls {
+    margin-bottom: 10px;
+}
+
+.table-switch-btn {
+    background-color: #000000;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.table-switch-btn:hover {
+    background-color: #555;
+}
+
+/* Hide all tables initially */
+table {
+    display: none;
+}
+
+/* Show the selected table */
+#users:checked ~ #users-table,
+#jets:checked ~ #jets-table,
+#rentals:checked ~ #rentals-table {
+    display: table;
+}
+
+.notification-list {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.notification-list li {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+

@@ -1,0 +1,23 @@
+<!-- header.html -->
+<header>
+    <div class="container">
+        <h1 class="logo">Jet Rental</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <!--<li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li> -->
+                <li><a href="/jets">Jets</a></li>
+                <!-- <li><a href="#">Contact</a></li> -->
+                {% if user_logged_in %}
+                <li><a href="/rented-jets">Rentals</a></li>
+                <li><a href="/account">My Account</a></li>
+                <li><a href="/logout">Logout</a></li>
+                {% else %}
+                <li class="signin-signup"><a href="/login">Sign In</a></li>
+                <li class="signin-signup"><a href="/register">Sign Up</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+    </div>
+</header>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include 'head.html' %}
+    <link href="{{ url_for('static', filename='styles/add_jet.css') }}" rel="stylesheet" type="text/css">
+</head>
+<body>
+{% include 'header.html' %}
+<main>
+    <section id="new-jet-form">
+        <h2>Add a New Jet</h2>
+        <form action="/submit-new-jet" enctype="multipart/form-data" method="POST">
+            <label for="name">Name:</label>
+            <input id="name" name="name" required type="text">
+
+            <label for="model">Model:</label>
+            <input id="model" name="model" required type="text">
+
+            <label for="year">Year:</label>
+            <input id="year" max="2024" min="1900" name="year" required type="number">
+
+            <label for="engine">Engine:</label>
+            <input id="engine" name="engine" required type="text">
+
+            <label for="color">Color:</label>
+            <input id="color" name="color" required type="text">
+
+            <label for="price">Price:</label>
+            <input id="price" name="price" required step="5" type="number">
+
+            <label for="image_url">Image:</label>
+            <input accept="image/*" id="image_url" name="image_url" required type="file">
+
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+</main>
+{% include 'footer.html' %}
+
+</body>
+</html>

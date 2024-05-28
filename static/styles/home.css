@@ -1,0 +1,182 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+    font-family: Times New Roman, Times New Roman;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px
+}
+
+/* Header Styles */
+header {
+    background-color: #000000;
+    color: #FFDD00;
+    padding: 20px 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #FFDD00;
+    text-decoration: none;
+}
+
+.signin-signup {
+    margin-left: auto;
+}
+
+
+/* Explore Section Styles */
+.explore {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),  url("../../photos/banner.png");
+    background-size: cover;
+    background-position: top;
+    color: #fff;
+    text-align: center;
+    padding: 200px 0; /* Increased padding for vertical centering */
+    height: 728px;
+}
+
+.explore .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Ensure container takes full height of the explore section */
+}
+
+.explore .btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #940000;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+
+/* About Section Styles */
+.about {
+    padding: 100px 0;
+}
+
+.about h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* Services Section Styles */
+.services {
+    background-color: #f9f9f9;
+    padding: 100px 0;
+}
+
+.services h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.services ul {
+    list-style-type: none;
+}
+
+.services ul li {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Fleet Section Styles */
+.fleet {
+    background-color: #000000;
+    color: #fff;
+    padding: 100px 0;
+}
+
+.fleet h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+/* Testimonials Section Styles */
+.testimonials {
+    background-color: #000000;
+    color: #fff;
+    padding: 100px 0;
+}
+
+.testimonials h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+/* Contact Section Styles */
+.contact {
+    background-color: #000000;
+    color: #fff;
+    padding: 100px 0;
+}
+
+.contact h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #000000;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer ul {
+    list-style-type: none;
+}
+
+footer ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+footer ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer p {
+    margin-top: 20px;
+    font-size: 14px;
+}
